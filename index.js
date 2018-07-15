@@ -41,7 +41,7 @@ else if (cart.length===1){
 
   }
 
-  // 'In your cart, you have mango at $84 and nuts at $29.' ]
+
  console.log(`In your cart, you have ${results.join(' ')}.`);
  }
   else {
