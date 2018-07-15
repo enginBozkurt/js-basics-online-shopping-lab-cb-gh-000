@@ -19,34 +19,54 @@ function addToCart(item) {
 }
 
 function viewCart() {
- var item = '';
- var price = '';
- var results = [];
- for(var i =0; i<cart.length; i++){
-   item = Object.keys(cart[i]) ;
-   price = Object.values(cart[i]);
-   console.log (item )
- }
-
- if (cart.length === 0){
+  var results = [];
+ var item =[];
+ var price =[];
+ 
+ if (cart.length===0){
    console.log( `Your shopping cart is empty.`) ;
  }
-
- else if (cart.length <= 2) {
-   results.push(`${item} at ${price}`);
-
-   console.log(`In your cart, you have ${results.join(' and ')}.`);
-
+ 
+ else if (cart.length===1){
+   console.log(`In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`);
+ }
+ 
+ 
+  else if (cart.length===2){
+   for(var i =0; i<cart.length; i++){
+    item = Object.keys(cart[i]) ;
+   price = Object.values(cart[i]);
+  results.push(`${item} at $${price}`);
+ 
+   }
+   
+   // 'In your cart, you have mango at $84 and nuts at $29.' ]
+  console.log(`In your cart, you have ${results.join(' and ')}.`);
+  } 
+   else {
+  
+    for(var j =0; j<cart.length; j++){
+   item = Object.keys(cart[j]) ;
+   price = Object.values(cart[j]); 
+   var last = j===cart.length-1
+   var lastPrice = j===cart.length-1
+   console.log(last) 
+   if ((!last) && (!lastPrice)){
+   
+  results.push(`${item} at $${price}`)
+ 
+ 
+   }
+ else {
+   results.push(`and ${item} at $${price}`)
+   
+ }
+ 
+  
+ }
+  console.log(`In your cart, you have ${results.join(', ')}.`)    
    }
 
- else if (cart.length > 2){
-   results.push(`${item} at ${price},`);
-
-  if (results[i]< results.length){
-   console.log(`In your cart, you have ${results.join(' ')}.`);
- }
-
-  }
 }
 
 // The total() function accepts no arguments, iterates through the cart array,
