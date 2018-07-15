@@ -40,7 +40,7 @@ function viewCart() {
    }
 
  else if (cart.length > 2){
-   results.push(`${item} at $${price},`);
+   results.push(`${item} at ${price},`);
 
   if (results[i]< results.length){
    console.log(`In your cart, you have ${results.join(' ')}.`);
