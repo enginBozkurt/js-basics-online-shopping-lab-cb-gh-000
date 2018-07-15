@@ -33,7 +33,7 @@ function viewCart() {
  }
 
  else if (cart.length <= 2) {
-   results.push(`${item} at $${price}`);
+   results.push(`${item} at ${price}`);
 
    console.log(`In your cart, you have ${results.join(' and ')}.`);
 
