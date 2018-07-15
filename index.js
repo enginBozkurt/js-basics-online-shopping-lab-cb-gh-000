@@ -49,7 +49,7 @@ function viewCart() {
      var last = j===cart.length-1
      var lastPrice = j===cart.length-1
      console.log(last)
-     
+
      if ((!last) && (!lastPrice)) {
       results.push(`${item} at $${price}`)
      }
