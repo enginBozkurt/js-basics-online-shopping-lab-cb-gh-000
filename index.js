@@ -59,7 +59,7 @@ else if (cart.length===1){
 
   }
 else {
-  results.push(`and ${item} at $${price}`)
+  results.push(`${item} at $${price}`)
 }
 }
  console.log(`In your cart, you have ${results.join(', ')}.`)
