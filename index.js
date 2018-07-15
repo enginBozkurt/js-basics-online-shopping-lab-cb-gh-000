@@ -10,12 +10,12 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  cart.push({[item]:price});
-
-
-// Upon the successful addition of a new item to the cart, the function should print <itemName> has been added to your cart. to the console and then return the updated cart.
-console.log(`${item} has been added to your cart`);
-console.log(cart)
+  var itemName = item;
+  var itemConstructor = new Object();
+  itemConstructor[itemName] = Math.floor(Math.random() * 100) + 1;
+  cart.push(itemConstructor);
+  console.log(`${itemName} has been added to your cart.`);
+  return cart;
 }
 
 function viewCart() {
